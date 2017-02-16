@@ -1,14 +1,14 @@
 //
-//  NatWeexBattery.m
+//  WeexNatBattery.m
 //
 //  Created by huangyake on 17/1/7.
 //  Copyright © 2017 Nat. All rights reserved.
 //
 
-#import "NatWeexBattery.h"
+#import "WeexNatBattery.h"
 #import "NatBattery.h"
 
-@implementation NatWeexBattery
+@implementation WeexNatBattery
 WX_EXPORT_METHOD(@selector(status:))
 
 - (void)status:(WXModuleCallback)callback{

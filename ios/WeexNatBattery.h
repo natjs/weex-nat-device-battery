@@ -1,5 +1,5 @@
 //
-//  NatWeexBattery.h
+//  WeexNatBattery.h
 //
 //  Created by huangyake on 17/1/7.
 //  Copyright © 2017 Nat. All rights reserved.
@@ -10,11 +10,11 @@
 #import <WeexSDK/WeexSDK.h>
 
 
-@protocol NatWeexBatteryPro <WXModuleProtocol>
+@protocol WeexNatBatteryPro <WXModuleProtocol>
 
 - (void)status:(WXModuleCallback)callback;
 @end
 
-@interface NatWeexBattery : NSObject<NatWeexBatteryPro>
+@interface WeexNatBattery : NSObject<WeexNatBatteryPro>
 
 @end
