@@ -23,7 +23,7 @@
     version="0.1.0">
     <name>nat-device-battery</name>
     <description></description>
-    <license>Apache 2.0</license>
+    <license>MIT</license>
     <keywords>weex,plugin,battery</keywords>
     <repo>https://*.git</repo>
     <issue>https://*</issue>
