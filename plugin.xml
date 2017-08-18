@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.w3.org/ns/widgets"
     id="nat-device-battery"
-    version="0.1.2">
+    version="0.1.4">
     <name>nat-device-battery</name>
     <description>Nat.js module: Battery</description>
     <license>MIT</license>
@@ -12,33 +12,33 @@
     
      <!-- ios -->
      <platform name="ios">
-         <framework src="NatBattery" type="podspec" spec="" />
          <config-file target="WeexpluginConfig.xml" parent="/*">
-             <feature name="WXTestModule">
+             <feature name="WeexNatBattery">
                  <param name="category" value="module" />
                  <param name="ios-package" value="WeexNatBattery" />
                  <param name="api" value="nat/device/battery" />
              </feature>
          </config-file>
+         
          <header-file src="ios/WeexNatBattery.h"/>
          <source-file src="ios/WeexNatBattery.m"/>
+         
+         <framework src="NatBattery" type="podspec" spec="0.0.2" />
      </platform>
 
      <!-- android -->
      <platform name="android">
         <config-file target="config.xml" parent="/*">
-             <feature name="DeviceBatteryModule">
+             <feature name="DeviceBattery">
                  <param name="category" value="module" />
-                 <param name="android-package" value="com.nat.weex.DeviceBatteryModule" />
+                 <param name="android-package" value="com.nat.weex.DeviceBattery" />
                  <param name="api" value="nat/device/battery" />
              </feature>
         </config-file>
 
-        <source-file
-             src="android/DeviceBatteryModule.java"
-            target-dir="src/com/alibaba/weex/nat/DeviceBatteryModule.java" />
+        <source-file src="android/DeviceBattery.java" target-dir="src/com/instapp/nat/device/battery" />
 
-        <framework src="com.nat:device-battery:1.0.2" />
+        <framework src="com.nat:device-battery:1.0.4" />
      </platform>
 
 </plugin>
