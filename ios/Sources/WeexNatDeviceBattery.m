@@ -1,25 +1,26 @@
 //
-//  WeexNatBattery.m
+//  WeexNatDeviceBattery.m
 //
 //  Created by huangyake on 17/1/7.
 //  Copyright © 2017 Instapp. All rights reserved.
 //
 
-#import "WeexNatBattery.h"
-#import "NatBattery.h"
+#import "WeexNatDeviceBattery.h"
+#import <WeexPluginLoader/WeexPluginLoader.h>
+#import <NatBattery/NatBattery.h>
 
-@implementation WeexNatBattery
+@implementation WeexNatDeviceBattery
 @synthesize weexInstance;
+
+WX_PlUGIN_EXPORT_MODULE(nat/device/battery, WeexNatDeviceBattery)
 WX_EXPORT_METHOD(@selector(status:))
 
 - (void)status:(WXModuleCallback)callback{
     [[NatBattery singletonManger] status:^(id error, id result) {
-        if (error) {
-            if (callback) {
+        if (callback) {
+            if (error) {
                 callback(error);
-            }
-        }else{
-            if (callback) {
+            } else {
                 callback(result);
             }
         }
